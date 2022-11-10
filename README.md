@@ -6,9 +6,13 @@
   
   - Lesson_2 - [HTML with img];
   
+  - Lesson_3 - [HTML with href];
+  
 ## **Задания, выполненные мною, при изучении HTML && CSS, на курсах**
 ### - ***[Stepik] Мария Ажгихина - "Web-технологии: начальный уровень"***
 
   - Lesson_1 - [Первый HTML];
   
-  - Lesson_2 - [HTML с картинкой]
+  - Lesson_2 - [HTML с картинкой];
+  
+  - Lesson_3 - [HTML с href];
