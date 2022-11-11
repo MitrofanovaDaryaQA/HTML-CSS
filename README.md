@@ -10,6 +10,8 @@
 
   - Lesson_4 - [HTML with ul,ol];
   
+  - Lesson_5 - [HTML with different tags];
+  
 ## **Задания, выполненные мною, при изучении HTML && CSS, на курсах**
 ### - ***[Stepik] Мария Ажгихина - "Web-технологии: начальный уровень"***
 
@@ -20,3 +22,5 @@
   - Lesson_3 - [HTML с href];
 
   - Lesson_4 - [HTML с ul,ol];
+  
+  - Lesson_5 - [HTML с другими тегами]
