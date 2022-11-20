@@ -12,6 +12,12 @@
   
   - Lesson_5 - [HTML with different tags];
   
+  - Lesson_6 - [HTML with button];
+  
+  - Lesson_7 - [HTML with table];
+  
+  - Lesson_8 - [HTML control work];
+  
 ## **Задания, выполненные мною, при изучении HTML && CSS, на курсах**
 ### - ***[Stepik] Мария Ажгихина - "Web-технологии: начальный уровень"***
 
@@ -23,4 +29,10 @@
 
   - Lesson_4 - [HTML с ul,ol];
   
-  - Lesson_5 - [HTML с другими тегами]
+  - Lesson_5 - [HTML с другими тегами];
+  
+  - Lesson_6 - [HTML с кнопкой];
+  
+  - Lesson_7 - [HTML с таблицей];
+  
+  - Lesson_8 - [HTML контрольная работа];
