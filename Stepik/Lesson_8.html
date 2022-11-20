@@ -1,0 +1,78 @@
+//Сверстать форму по следующему шаблону. https://ucarecdn.com/6098de84-7627-405f-b643-6b7c58a998ae/
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Задача</title>
+</head>
+
+<body>
+   <form action="" method="post">
+
+<fieldset>
+   <legend>Общая информация</legend>
+   <div class="name">
+   <p>
+      <label>Фамилия</label>
+      <input type="text" id="lastname" name="last_name" required placeholder="Иванов" style=position:absolute;left:8%;>
+   </p>
+   <p>
+      <label>Имя</label>
+      <input type="text" id="firstname" name="first_name" required placeholder="Иван" style=position:absolute;left:8%;>
+   </p>
+   <p>
+      <label>Отчество</label>
+      <input type="text" id="lastname2" name="last_name2" placeholder="Иванович" style=position:absolute;left:8%;>
+   </p>
+   <p>
+      <label>email</label>
+      <input type="text" id="lastname" name="user_email" required placeholder="email@email.ru" style=position:absolute;left:8%;>
+   </p>
+   </div>
+</fieldset>
+
+<br>
+   <fieldset>
+<legend>Пол</legend>
+   <div class="sex">
+   <input type="radio" id="man" name="sex" value="male">
+   <label for="male">М</label>
+
+   <input type="radio" id="woman" name="sex" value="female">
+   <label for="female">Ж</label>
+   </div>
+   </fieldset>
+</br>
+
+
+<fieldset>
+   <legend>Хобби</legend>
+   <div class="hobby">
+      <input type="checkbox" id="paint" value="painting">
+      <label>Рисование</label>
+
+      <input type="checkbox" id="read" value="reading">
+      <label>Чтение</label>
+
+      <input type="checkbox" id="knitting"value="knitting">
+      <label>Вязание</label>
+      
+      <input type="checkbox" id="cooking" value="cooking">
+      <label>Кулинария</label>
+      </div>
+</fieldset>
+
+
+<p>
+      <div class="button">
+         <button type="submit" value="Submit">Отправить</button>
+         <button type="reset" value="Reset">Очистить</button>
+      </div>
+</p>
+</form>
+</body>
+
+</html>
