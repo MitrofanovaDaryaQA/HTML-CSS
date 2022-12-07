@@ -20,6 +20,10 @@
   
   - Lesson_9 - [HTML with inline-style CSS];
   
+  - Lesson_10 - [Two different files for the lesson: HTML, CSS];
+  
+  - Lesson_11 - [Two different files for the lesson: HTML, CSS];
+  
 ## **Задания, выполненные мною, при изучении HTML && CSS, на курсах**
 ### - ***[Stepik] Мария Ажгихина - "Web-технологии: начальный уровень"***
 
@@ -40,3 +44,7 @@
   - Lesson_8 - [HTML контрольная работа];
   
   - Lesson_9 - [HTML с inline-стилем CSS];
+
+  - Lesson_10 - [Два разных файла по уроку: HTML, CSS];
+  
+  - Lesson_11 - [Два разных файла по уроку: HTML, CSS];
