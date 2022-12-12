@@ -32,6 +32,8 @@
   
   - Lesson_15 - [Two different files for the lesson: HTML, CSS];
   
+  - Lesson_16 - [Two different files for the lesson: HTML, CSS];
+  
 ## **Задания, выполненные мною, при изучении HTML && CSS, на курсах**
 ### - ***[Stepik] Мария Ажгихина - "Web-технологии: начальный уровень"***
 
@@ -64,3 +66,5 @@
   - Lesson_14 - [Два разных файла по уроку: HTML, CSS];
   
   - Lesson_15 - [Два разных файла по уроку: HTML, CSS];
+  
+  - Lesson_16 - [Два разных файла по уроку: HTML, CSS];
