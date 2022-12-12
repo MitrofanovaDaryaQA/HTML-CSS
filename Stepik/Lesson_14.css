@@ -1,0 +1,26 @@
+/* Давайте немного преобразим таблицу, ведь пользователю будет удобнее с ней работать, когда он будет видеть в какой ячейке находится.
+
+Добавьте hover-эффекты следующим элементам:
+
+Элементу td, чтобы при наведении цвет фона менялся на  #ff8052
+Элементу  th, чтобы при наведении менялся цвет текста на #ffffff и цвет фона менялся на  #d84315 */
+
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-size: 20px;
+    overflow: hidden;
+}
+th, td{
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+td:hover{
+    background:#ff8052; 
+}
+th:hover{
+    color:#ffffff;
+    background:#d84315; 
+}
