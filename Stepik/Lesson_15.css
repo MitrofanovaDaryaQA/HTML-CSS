@@ -1,0 +1,90 @@
+/* Изучите код, представленный в задании, он уже содержит стили, которые не относятся к оформлению текста на странице. Также вам нужно будет поработать с Figma, макет данной страницы содержится тут: ссылка на макет (https://www.figma.com/file/BMRmfEuvxqOiCetGDPKEyI/Coffee-Page-1.0?node-id=1%3A3&t=AbKsKoDQZ1fRTRL1-0). Благодаря макету вы найдете нужные цвета и стили для текстовых фрагментов.
+
+Вся стилизация применяется к селекторам класса. Если вы примените стили к тегу h1, например, задание не будет считаться выполненным, т.к. нужно применить стили к .main-title. Проверяются только основные стили, такие как размер текста, цвет текста, подчеркивание или его отсутствие, выравнивание текста и его толщина. 
+
+Обращайте внимание на элементы, к которым применяете стили. В конце у вас должна быть страница, соответствующая макету. Также обращаю внимание: несмотря на то, что figma содержит большинство свойств, о некоторых вам нужно думать самостоятельно. */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Roboto;
+    background: #fffded;
+}
+.container{
+    margin: 0 150px;
+}
+.main-title{
+    padding: 55px 0;
+    color: #753C20;
+    font-family: 'Roboto';
+    font-size: 48px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.block {
+    display: flex;
+    margin-bottom: 55px;
+    }
+img{
+    width: 400px;
+    height: 300.28;
+      
+    left: 150px;
+
+    }
+.block-text {
+    margin: 0 55px;
+    }
+.title {
+    margin-bottom: 55px;
+    width: 140px;
+    height: 42px;
+    left: 865px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+
+    color: #D89B82;
+    }
+.text {
+    font-family: 'Roboto';
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+    position: absolute;
+    width: 700px;
+    left: 590px;
+    }
+.join-title{
+    margin-bottom: 34px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+
+    color: #E78326;
+}
+.join-text{
+    margin-bottom: 55px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+
+color: #000000;
+}
+.email{
+    color: #E78326;
+    text-decoration: none;
+    
+}
