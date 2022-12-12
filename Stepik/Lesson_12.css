@@ -1,0 +1,4 @@
+//Добавьте к button псевдокласс :hover, чтобы при наведении изменялся цвет фона кнопки на #cddc39 (используйте свойство background)
+
+button:hover{
+background-color:#cddc39;}
