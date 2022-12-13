@@ -34,6 +34,18 @@
   
   - Lesson_16 - [Two different files for the lesson: HTML, CSS];
   
+  - Lesson_17 - [Two different files for the lesson: HTML, CSS];
+  
+  - Lesson_18 - [Two different files for the lesson: HTML, CSS];
+  
+  - Lesson_19 - [Two different files for the lesson: HTML, CSS];
+  
+  - Lesson_20 - [Two different files for the lesson: HTML, CSS];
+  
+  - Lesson_21 - [HTML with FlexBox];
+  
+  - Lesson_22 - [HTML with create nav];
+  
 ## **Задания, выполненные мною, при изучении HTML && CSS, на курсах**
 ### - ***[Stepik] Мария Ажгихина - "Web-технологии: начальный уровень"***
 
@@ -68,3 +80,15 @@
   - Lesson_15 - [Два разных файла по уроку: HTML, CSS];
   
   - Lesson_16 - [Два разных файла по уроку: HTML, CSS];
+  
+  - Lesson_17 - [Два разных файла по уроку: HTML, CSS];
+  
+  - Lesson_18 - [Два разных файла по уроку: HTML, CSS];
+  
+  - Lesson_19 - [Два разных файла по уроку: HTML, CSS];
+  
+  - Lesson_20 - [Два разных файла по уроку: HTML, CSS];
+  
+  - Lesson_21 - [HTML с FlexBox];
+  
+  - Lesson_22 - [HTML с меню страницы];
