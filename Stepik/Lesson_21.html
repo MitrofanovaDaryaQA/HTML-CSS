@@ -1,0 +1,54 @@
+//Вам нужно стилизовать объекты с классами boxes и container при помощи flexbox, чтобы элементы были расположены следующим образом: https://ucarecdn.com/72573f4e-482f-49bb-9c96-df92138c7da3/
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+  <style>
+  *{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;   
+}
+.boxes{
+    display: flex;
+    justify-content: column;
+    flex-direction: column;
+}
+.box-large{
+    width: 200px;
+    height: 300px;
+    background: rgb(46, 98, 175);
+    color: aliceblue;
+    font-size: 40px;
+    margin: 10px; /*чтобы отделить элементы друг от друга*/
+}
+.box-small{
+    width: 200px;
+    height: 200px;
+    background: rgb(46, 98, 175);
+    color: aliceblue;
+    font-size: 40px;
+    margin: 10px; /*чтобы отделить элементы друг от друга*/
+}
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="boxes">
+            <div class="box-large">1</div>
+            <div class="box-small">2</div>
+        </div>
+        <div class="boxes">
+            <div class="box-small">3</div>
+            <div class="box-large">4</div>
+        </div>
+    </div>
+</body>
+</html>
