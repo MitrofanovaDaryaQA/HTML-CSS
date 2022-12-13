@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding: 40px;
+}
+nav{
+    display: flex; 
+    background-color: #E5E5E5;
+    justify-content: space-between; /*раскидываем логотип и меню по разным краям*/
+    align-items: center; /*размещаем по центру*/
+}
+.menu{
+     list-style: none;
+     display: flex; 
+     padding: 35px;
+}
+.link{
+    text-decoration: none;
+    color: #000000;
+}
+.link:hover{
+    color: #05A88D;
+}
+ul{
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.menu-1li{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    text-transform: capitalize;
+    color: #05A88D;
+    padding: 10px;
+}
+.menu-li{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    text-transform: capitalize;
+    color: #000000;;
+    padding: 10px;
+}
+.logo{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.015em;
+    color: #05A88D;
+    }
+p{
+    font-family: 'Montserrat';
+    display: flex;
+    align-items: center;
+    color: #05A88D;
+    padding: 10px;
+    display: inline;
+}
+.button_1{
+    box-sizing: border-box;
+    border: 1px solid #05A88D;
+    border-radius: 3px;
+    padding: 12.5px 21.5px;
+    margin-right: -350px;
+    
+}
+.header{
+    width: 100%;
+    box-sizing: border-box;
+}
+   </style>
+</head>
+
+<body>
+   <header class="header">
+      <nav class="menu">
+         <ul>
+            <li class="menu-1li"><a href="#" class="link">Products</a></li>
+            <li class="menu-li"><a href="#" class="link">About</a></li>
+            <li class="menu-li"><a href="#" class="link">Blog</a></li>
+            <li class="menu-li"><a href="#" class="link">Contacts</a></li>
+         </ul>
+         <a class="logo">MYCOMPANY</a>
+
+         <p class="button_1">Sign Up</p>
+         <p class="button_2">Login</p>
+      </nav>
+   </header>
+</body>
+
+</html>
