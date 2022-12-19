@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>COFFEE TIME</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;500&display=swap" rel="stylesheet">
+   <style>
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    font-family: 'Oswald', sans-serif;
+    
+}
+header{
+    box-sizing: border-box;
+}
+.container{
+    width: 1440px auto;
+    height: 50px;     
+}
+.menu{
+    height: 200%;
+    padding: 0px 50px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; 
+}
+.menu_logo{
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;  
+}
+ul{
+    list-style: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex; 
+    justify-content: center;
+    align-items: right; 
+}
+li{
+   padding: 10px;
+}
+.menu_li{
+    padding-right: 40px;   
+}
+.link{
+    text-decoration: none; 
+    color: #000000;  
+   }
+a {
+  color: #817070;
+  text-decoration: none;
+  background:  no-repeat 0 100%;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 2px;
+  transition: background-size .3s ease;
+}
+a:hover, a:focus {
+  background-size: 100% 2px;
+}
+.box{
+   padding-top: 50px;
+   width: 1440px auto;
+   height: 700px auto;
+   }
+.foto_1{   
+   width: 100%;
+   height: 100%;
+}
+.title_1{
+  margin-top: 28%;
+    margin-left: 35%;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 89px;
+    position: absolute;
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: uppercase;  
+
+    border-bottom: 1px solid #817070;
+}
+.menu_logo:hover{
+    color:#817070
+}
+.box_2, .box_4{
+   display: flex;
+   flex-direction: row-reverse;
+   padding-top: 50px;
+   width: 1440px auto;
+   height: 700px auto;
+
+   }
+.title_2{
+   align-items: center;
+   padding-left: 700px;
+   margin-top: 60px;
+   font-family: 'Oswald';
+   font-weight: 500;
+   font-size: 36px;
+   line-height: 53px;
+   color: #000000;
+}
+.text{
+   width: 597px;
+   height: 180px;
+   font-family: 'Oswald';
+   font-weight: 300;
+   font-size: 20px;
+   line-height: 30px;
+   color: #000000;
+   
+   padding-top: 200px;
+}
+.foto_2{
+    width: 48%;
+    height: 48%;
+    margin: 80px 20px 0 0;
+}
+.foto_2:hover{
+    width: 900px;
+}
+#blog{
+    background: #dfd6d6;
+    margin-top: 50px;
+}
+.foto_3{
+    width: 320px;
+    justify-content: center;
+    align-items: center;
+}
+.foto_3:hover{
+    width: 450px ;
+}
+.title_3{
+   align-items: center;
+   padding-top: 50px;
+   font-family: 'Oswald';
+   font-weight: 500;
+   font-size: 36px;
+   line-height: 53px;
+   text-align: center;
+   text-transform: uppercase;
+   color: #000000;
+}
+.blog_card{
+    margin-top: 3%;
+    padding: 3%;
+    display: flex;
+	flex-direction: column; 
+    width: 500px auto;
+    height: 900px auto;
+    background: #dfd6d6;
+}
+h3, p{
+    padding: 5% 0 5%;
+    
+}
+.card__content{
+    color: #000000;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 10px;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.main {
+	flex: 1 0 auto;
+}
+.footer{
+    padding: 44px 40px;
+    width: 1440px auto;
+    height: 160px;
+    flex: 0 0 auto;
+    background: #817070;
+}
+.footer__top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.subscribe{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+button{
+    border: 0px;
+}
+.email{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 10px;
+    text-align: center;
+    color: #FFFFFF;
+    background: #817070;
+    padding: 15px 10px 15px 10px;
+    border: 2px solid;
+    outline: none;
+}
+input::placeholder{
+    color: #FFFFFF;
+}
+.submit{
+    text-decoration: none;
+    margin: 25px;
+    padding: 15px 20px 15px 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 5px;
+}
+a{
+    text-decoration: none;
+    color: #817070;
+}
+.subscribe:hover, .submit:hover{
+    font-size: 200%;
+    background: #FFFFFF;
+    color: #817070;
+}
+.footer__bottom{
+    width: 1440px auto;
+    height: 100px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 14px;
+}
+   </style>
+</head>
+
+<body>
+   <div class="wrapper">
+<header class="header">
+   <div class="container">
+   <nav class="menu">
+      <a href="#" class="menu_logo">COFFEE HOUSE</a>
+      <ul>
+         <li class="menu-li"><a href="#" class="link">HOME</a></li>
+         <li class="menu-li"><a href="#" class="link">STORY</a></li>
+         <li class="menu-li"><a href="#" class="link">BLOG</a></li>
+         <li class="menu-li"><a href="#" class="link">SUBSCRIBE</a></li>
+      </ul>
+   </nav>
+   </div>
+</header>
+</div>
+<div class="box">
+  <h1 class="title_1">TAKE YOUR TIME</h1>
+   <img class="foto_1" src="https://images.unsplash.com/photo-1494415859740-21e878dd929d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1932&q=80" alt="COFFEE TIME">
+</div>
+<div class="box_1">
+<h2 class="title_2">STORY</h2>
+<div class="box_2">
+<h3 class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget arcu quis cursus. Nunc id tortor imperdiet,
+vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend euismod. Class aptent taciti sociosqu ad litora torquent
+per conubia nostra, per inceptos himenaeos. Praesent mattis ultrices est, congue ullamcorper erat bibendum pulvinar. In
+accumsan dapibus accumsan. Maecenas semper est ut nunc feugiat, vel ultrices ligula commodo. Donec eget pulvinar nunc,
+eget pharetra risus.</h3>
+<img class="foto_2" src="https://images.unsplash.com/photo-1507915135761-41a0a222c709?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80" alt="COFFEE TIME content">
+</div>
+</div>
+<div class="box_3" id="blog">
+   <h2 class="title_3">Blog</h2>
+   <div class="box_4">
+   <div class="blog_card">
+      <div class="card__content" >
+         <h3>Daily Coffee News</h3>
+         <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31" class="foto_3">
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget arcu quis cursus. Nunc id tortor
+            imperdiet, vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend euismod.</p>
+      </div>
+   </div>
+   <div class="blog_card">
+      <div class="card__content">
+         <h3>Dutch Coffee Chains</h3>
+         <img src="https://images.unsplash.com/photo-1455470956270-4cbb357f7052" class="foto_3">
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget arcu quis cursus. Nunc id tortor
+            imperdiet, vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend euismod.</p>
+      </div>
+   </div>
+<div class="blog_card">
+   <div class="card__content">
+      <h3 class="text_blog">Start Up In Minneapolis</h3>
+      <img src="https://images.unsplash.com/photo-1461988091159-192b6df7054f" class="foto_3">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean varius eget arcu quis cursus. Nunc id tortor
+         imperdiet, vestibulum orci sed, gravida orci. Cras a enim ac elit eleifend euismod.</p>
+   </div>
+</div>
+</div>
+</div>
+</main>
+<footer class="footer">
+   <div class="footer__top" id="subscribe">
+      <a href="#" class="subscribe">Subscribe</a>
+      <input type="email" class="email" placeholder="enter your email">
+      <button type="submit" class="submit"><a href="#">Submit</a></button>
+   </div>
+   </div>
+   <div class="footer__bottom">© COPYRIGHT 2022</div>
+   </footer>
+   </div>
+</body>
+
+</html>
