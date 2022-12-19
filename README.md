@@ -46,6 +46,12 @@
   
   - Lesson_22 - [HTML with create nav];
   
+  - Lesson_23 - [HTML with card];
+  
+  - Lesson_24 - [HTML with footer];
+  
+  - Lesson_25 - [HTML with control work];
+  
 ## **Задания, выполненные мною, при изучении HTML && CSS, на курсах**
 ### - ***[Stepik] Мария Ажгихина - "Web-технологии: начальный уровень"***
 
@@ -92,3 +98,9 @@
   - Lesson_21 - [HTML с FlexBox];
   
   - Lesson_22 - [HTML с меню страницы];
+  
+  - Lesson_23 - [HTML с карточкой];
+  
+  - Lesson_24 - [HTML с подвалом страницы];
+  
+  - Lesson_25 - [HTML с контрольной работой];
