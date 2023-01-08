@@ -1,0 +1,39 @@
+//Что должно получиться: пользователь открывает страницу, вводит имя и фамилию, нажимает "Отправить". Внизу появляется текст с приветствием. Затем можно изменить фамилию или имя, вновь нажать "Отправить" - приветствие обновится.
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+
+<body>
+   <p><label for="First name">Имя</label>
+      <input id="First name" type="text" name="Firstname" style=position:absolute;left:8%;>
+   </p>
+
+   <p> <label for="Last name">Фамилия</label>
+      <input id="Last name" type="text" name="Lastname" style=position:absolute;left:8%;>
+   </p>
+
+   <div>
+
+      <button id="button">Отправить</button>
+   </div>
+   <p>Ответ: <span class="answer"></span></p>
+   <script>
+         let buttonElement = document.querySelector(`button`);
+         let answerElement = document.querySelector(`.answer`);
+         let FirstnameElement = document.querySelector(`[name=Firstname]`);
+         let LastnameElement = document.querySelector(`[name=Lastname]`);
+         buttonElement.addEventListener("click", function () {
+           answerElement.textContent = `Здравствуйте, ${FirstnameElement.value} ${LastnameElement.value}!`
+         });
+   </script>
+
+</body>
+
+</html>
