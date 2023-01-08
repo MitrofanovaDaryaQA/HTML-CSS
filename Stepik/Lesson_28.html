@@ -1,0 +1,50 @@
+//Что должно получиться: пользователь открывает страницу и выбирает товары, которые хочет приобрести. После этого нажимает «Выбрать» и в строке «Общая стоимость» появляется стоимость покупки. Если пользователь меняет выбранные товары, после нажатия на кнопку «Выбрать» происходит перерасчет «Общей стоимости».
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   
+</head>
+
+<body>
+   <p>Выберите товары:</p>
+   <div>
+      <input type="checkbox" id="Choice1" name="food" value="120">
+      <label for="Choice1">Пирог с яблоком - 120p</label>
+   </div>
+   <div>
+      <input type="checkbox" id="Choice2" name="food" value="80">
+      <label for="Choice2">Шоколадный кекс - 80р</label>
+   </div>
+   <div>
+      <input type="checkbox" id="Choice3" name="food" value="180">
+      <label for="Choice3">Чискейк - 180р</label>
+   </div>
+   <button class="btn">Выбрать</button>
+   <p>Общая стоимость: <span class="result"></span></p>
+   <script>
+      btnElement = document.querySelector(".btn"); //получаем элемент с классом btn
+         resultElement = document.querySelector(".result"); //получаем элемент с классом result
+         checkboxButtons = document.querySelectorAll('[name="food"]'); //получаем список всех checkbox элементов
+
+         btnElement.addEventListener("click", function () {  //по нажатию на кнопку Отправить
+            let Total = 0;                 //суммарная стоимость
+            for (const checkboxButton of checkboxButtons) {      //для каждой checkbox-кнопки из списка checkbox-кнопок
+               if (checkboxButton.checked) {                  //если checkbox-кнопка выбрана
+                  Total += parseInt(checkboxButton.value);
+            }
+            else {
+               resultElement.textContent = "ничего не выбрано." //иначе записываем в result, что ничего не выбрано
+            }
+         }
+            resultElement.textContent = `${Total} руб`;
+         });
+   </script>
+</body>
+
+</html>
