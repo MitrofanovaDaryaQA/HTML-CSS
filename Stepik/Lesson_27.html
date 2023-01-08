@@ -1,0 +1,306 @@
+/*Вам нужно с помощью JavaScript сделать страницу "живой". Перед вами страница оформления заказа на сайте кофейни. Пользователь отмечает товар, который хочет заказать и указывает кол-во. По умолчанию кол-во равно 0. 
+
+Внизу страницы есть строка Итого, которая меняет свое значение в процессе действий пользователя.
+
+По нажатию на кнопку "Оформить заказ" появляется модальное окно, где указаны заказчик (Фамилия Имя) и Итого (общая сумма покупки).
+
+Что нужно реализовать:
+
+Поля ввода для Фамилии и Имени: по кнопке "Оформить заказ" в модальном окне alert выводится строка Заказчик: Фамилия Имя (те, что были введены пользователем, если ничего не введено - пустая строка).
+Чекбоксы с наименованиями товаров. Пользователь нажимает на чекбокс и программа должна понимать, что данный товар выбран, а значит его нужно учитывать в общей сумме, либо наоборот - чекбокс снят, значит данный товар должен исчезнуть из суммы покупки. 
+Рядом с каждым товаром находится поле ввода для указания количества товара. По умолчанию значение равно 0. В общей сумме покупки должно учитываться число, которое вводит пользователь в данное поле. Однако, если пользователь ввел число, а чекбокс не выбрал - данное кол-во не должно учитываться.
+Внизу над кнопкой "Оформить заказ" пользователю всегда пересчитывается итоговая сумма покупки исходя из действий пользователя.
+Варианты упрощения задания:
+
+1 способ (упрощенный): пересчет итоговой суммы происходит не автоматически, а после нажатия на кнопку "Оформить заказ". Т.е. пользователь ввел все данные и выбрал нужные товары, нажал на кнопку, увидел в alert Фамилию Имя и Итого. Плюс, не нужно вводить кол-во товара (данные элементы также можно удалить из html файла). Т.е. остаются только checkbox элементы, пользователь выбрал товар - учитываем его, снял галочку - не учитываем.
+2 способ (упрощенный): пересчет итоговой суммы происходит не автоматически, а после нажатия на кнопку "Оформить заказ". Т.е. пользователь ввел все данные и выбрал товары, указал кол-во, нажал на кнопку, увидел в alert Фамилию Имя и Итого. На странице модуль с «Итого» отсутствует - его можно удалить.
+Модификации по усложнению: 
+
+Можно сделать, но необязательно: при выборе чекбокса - кол-во товара становится равно 1, при снятии чекбокса обнуляется.
+Можно сделать, но необязательно: проверка на ввод нежелательных чисел, например, запрет ввода отрицательных значений и значений вида 01, 02 и т.п. Например, при вводе нежелательного числа автоматически сменить его на 0, или выводить ошибку (однако неверно веденное число не должно тогда участвовать в вычислениях).
+Можно сделать, но необязательно: Вы можете изменить наименования товаров, их цену, вы можете вывести по кнопке "Оформить заказ" более расширенную информацию, например: наименование товара - его кол-во - общую цену за данный товар и т.п. Вы можете добавить дополнительные блоки с товарами, например, размер стаканчика кофе - от его будет зависеть цена, и т.п. вещи.
+В папке проекта уже есть html и css файлы. Также есть файл main.js, где написаны некоторые подсказки к написанию кода (для выбравших способ 1 или 2 подсказки отмечены (*) - остальное вам не потребуется). Однако, если вы хотите, вы можете самостоятельно сверстать страницу и запрограммировать ее. Также, вы можете не пользоваться подсказками и сделать все самостоятельно.  Макет страницы: ссылка (фигма), ссылка на макет psd (яндекс.диск) */
+
+
+<!DOCTYPE html>
+<html lang="ru" class="classes">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="robots" content="noindex">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+   <style>
+      *{
+    margin: 0;
+    padding: 0;
+}
+body{    
+    position: relative;
+    width: 1440px;
+    height: 681px;
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    color: #ffffff;
+    background-color: #817070;
+}
+.head{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 110px;      
+    background-color: #ffffff;
+    
+}
+h1{
+    margin-top: 29px;    
+    color: #000000;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 53px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.user{
+    display: flex;
+    justify-content: space-between;
+    width: calc(300px + 300px +64px);
+    margin: 86px 401px auto 375px;
+}
+.name2 {
+    width: 300px;
+    height: 55px;
+    background-color: #817070;
+    
+    border: 3px solid #ffffff;
+}
+::placeholder{
+    font-family: 'Oswald', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+    text-align: center;
+}
+.choice{
+    display: flex;
+    justify-content: space-between;
+    margin: 84px 304px auto 352px;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+    width: 298px;
+    height: 55px;
+}
+.item_2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    width: 354px;
+    height: 55px;
+}
+input {
+    
+    background: #817070;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    outline: none;
+}
+
+input[name="quantity"]{
+width: calc(130px - 3px - 3px);
+height: calc(55px - 6px);
+background: #817070;
+border: 3px solid #FFFFFF;
+
+}
+input[type="checkbox"]{
+    width: 21px;
+    height: 23px;
+    position: absolute;
+    z-index: -1;
+    opacity: 0; 
+
+}
+
+label::before{
+    margin-right: 16px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+input[type="checkbox"] + label {
+    display: flex;
+    align-items: center;
+    user-select: none;
+  }
+  input[type="checkbox"]+label::before {
+    content: '';
+    display: inline-block;
+    width: calc(21px - 8px);
+    height:calc(23px - 8px) ;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 4px solid #ffffff;
+    background-color: #817070;   
+   
+  }
+  input[type="checkbox"]:checked+label::before {
+    border-color: 4px solid #ffffff;
+    background-color: #573636;
+    background-image: none;
+  }
+  p{
+    margin-top: calc(39px - 17px);
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+  }
+  .checkout{
+    margin-top: 26px;    
+    display: flex;
+    justify-content: center;
+  }
+  .btn{
+    display: block;
+    width: 190px;
+    height: 55px;
+    margin-bottom: 35px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #817070;
+    background: #FFFFFF;
+    border: 3px solid #FFFFFF;
+  }
+  .btn:hover{
+    background: #817070;
+    color: #ffffff;
+  }
+ 
+   </style>
+</head>
+
+<body>
+   <header class="head">
+      <h1>COFFEE HOUSE</h1>
+   </header>
+   <div class="user">
+      <input type="text" class="name2" name="surname" placeholder="Введите Фамилию">
+      <input type="text" class="name2" name="name" placeholder="Введите Имя">
+   </div>
+   <div class="choice">
+      <div class="block_1">
+         <div class="item">
+            <input type="checkbox" name="menu" id="espresso" data-price="80" data-goods="Эспрессо"
+               onchange="totalSumm()">
+            <label for="espresso">Эспрессо 80р.</label>
+            <input type="number" name="quantity" placeholder="0" min="0" max="100" onchange="totalSumm()">
+         </div>
+         <div class="item">
+            <input type="checkbox" name="menu" id="americano" data-price="110" data-goods="Американо"
+               onchange="totalSumm()">
+            <label for="americano">Американо 110р.</label>
+            <input type="number" name="quantity" placeholder="0" onchange="totalSumm()">
+         </div>
+         <div class="item">
+            <input type="checkbox" name="menu" id="latte" data-price="120" data-goods="Латте" onchange="totalSumm()">
+            <label for="latte">Латте 120р.</label>
+            <input type="number" name="quantity" placeholder="0" onchange="totalSumm()">
+         </div>
+         <div class="item">
+            <input type="checkbox" name="menu" id="cappuccino" data-price="90" data-goods="Капучино"
+               onchange="totalSumm()">
+            <label for="cappuccino">Капучино 90р.</label>
+            <input type="number" name="quantity" placeholder="0" onchange="totalSumm()">
+         </div>
+      </div>
+      <div class="block_2">
+         <div class="item item_2">
+            <input type="checkbox" name="menu" id="chocolate_cupcake" data-price="80" data-goods="Шоколадный кекс"
+               onchange="totalSumm()">
+            <label for="chocolate_cupcake">Шоколадный кекс 80р.</label>
+            <input type="number" name="quantity" placeholder="0" onchange="totalSumm()">
+         </div>
+         <div class="item item_2">
+            <input type="checkbox" name="menu" id="blueberry_cupcake" data-price="90" data-goods="Черничный кекс"
+               onchange="totalSumm()">
+            <label for="blueberry_cupcake">Черничный кекс 90р.</label>
+            <input type="number" name="quantity" placeholder="0" onchange="totalSumm()">
+         </div>
+         <div class="item item_2">
+            <input type="checkbox" name="menu" id="apple_tart" data-price="100" data-goods="Яблочный тарт"
+               onchange="totalSumm()">
+            <label for="apple_tart">Яблочный тарт 100р.</label>
+            <input type="number" name="quantity" placeholder="0" onchange="totalSumm()">
+         </div>
+      </div>
+   </div>
+   <p>Итого: <span class="result">0 р.</span></p>
+   <div class="checkout"><button class="btn">оформить заказ</button></div>
+   <script>
+      btnElement = document.querySelector(".btn");
+         resultElement = document.querySelector(".result");
+         const products = document.querySelectorAll(".item");
+         inputSurname = document.querySelector('[name="surname"]');
+         inputName = document.querySelector('[name="name"]');
+
+
+
+         function totalSumm() {
+            sum = 0;
+            for (const product of products) {
+               let checkboxElement = product.querySelector('input[type="checkbox"]');
+               let amountElement = product.querySelector('input[type="number"]');
+               if (checkboxElement.checked) {
+                  if (amountElement.value <= 0 || amountElement.value > 100) {
+                     amountElement.value = 1;
+                  }
+                  sum += parseInt(checkboxElement.dataset.price) * parseInt(amountElement.value);
+               }
+               else {
+                  amountElement.value = 0;
+               }
+               resultElement.textContent = sum;
+            }
+         }
+         btnElement.addEventListener("click", function () {
+            orderList = [];
+            for (const product of products) {
+               let choiceElement = product.querySelector('[name="menu"]');
+               let amount = product.querySelector('[name="quantity"]');
+               if (choiceElement.checked) {
+                  firstSum = parseInt(choiceElement.dataset.price) * parseInt(amount.value);
+                  foodName = choiceElement.dataset.goods;
+                  position = `${foodName} - ${amount.value} шт. = ${firstSum} р.`;
+                  orderList.push(position);
+               }
+            }
+            if (orderList == "") {
+               alert("Товар не выбран!");
+            } else {
+               alert(
+                  `Заказчик: ${inputSurname.value} ${inputName.value}\n\nВаш заказ:\n${orderList.join("\n")}\n\nИтого: ${resultElement.textContent} руб.`
+               );
+            }
+         })
+
+   </script>
+</body>
+
+</html>
